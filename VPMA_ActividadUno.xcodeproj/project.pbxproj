@@ -14,6 +14,11 @@
 		FA1EA8502292FEA90017B8D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1EA84E2292FEA90017B8D8 /* LaunchScreen.storyboard */; };
 		FA1EA85B2292FEA90017B8D8 /* VPMA_ActividadUnoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA85A2292FEA90017B8D8 /* VPMA_ActividadUnoTests.swift */; };
 		FA1EA8662292FEA90017B8D8 /* VPMA_ActividadUnoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA8652292FEA90017B8D8 /* VPMA_ActividadUnoUITests.swift */; };
+		FA1EA874229303170017B8D8 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA873229303170017B8D8 /* RegisterViewController.swift */; };
+		FA1EA876229303230017B8D8 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA875229303230017B8D8 /* ForgotPasswordViewController.swift */; };
+		FA1EA87822930D680017B8D8 /* EmployeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA87722930D680017B8D8 /* EmployeViewController.swift */; };
+		FA1EA87A22930D8D0017B8D8 /* MoneyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA87922930D8D0017B8D8 /* MoneyCollectionViewController.swift */; };
+		FA1EA87C22932D5A0017B8D8 /* Empleados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA87B22932D5A0017B8D8 /* Empleados.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		FA1EA8612292FEA90017B8D8 /* VPMA_ActividadUnoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VPMA_ActividadUnoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1EA8652292FEA90017B8D8 /* VPMA_ActividadUnoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPMA_ActividadUnoUITests.swift; sourceTree = "<group>"; };
 		FA1EA8672292FEAA0017B8D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA1EA873229303170017B8D8 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA1EA875229303230017B8D8 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FA1EA87722930D680017B8D8 /* EmployeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeViewController.swift; sourceTree = "<group>"; };
+		FA1EA87922930D8D0017B8D8 /* MoneyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyCollectionViewController.swift; sourceTree = "<group>"; };
+		FA1EA87B22932D5A0017B8D8 /* Empleados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empleados.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,15 @@
 			children = (
 				FA1EA8452292FEA90017B8D8 /* AppDelegate.swift */,
 				FA1EA8472292FEA90017B8D8 /* ViewController.swift */,
+				FA1EA873229303170017B8D8 /* RegisterViewController.swift */,
+				FA1EA87722930D680017B8D8 /* EmployeViewController.swift */,
+				FA1EA87922930D8D0017B8D8 /* MoneyCollectionViewController.swift */,
+				FA1EA875229303230017B8D8 /* ForgotPasswordViewController.swift */,
 				FA1EA8492292FEA90017B8D8 /* Main.storyboard */,
 				FA1EA84C2292FEA90017B8D8 /* Assets.xcassets */,
 				FA1EA84E2292FEA90017B8D8 /* LaunchScreen.storyboard */,
 				FA1EA8512292FEA90017B8D8 /* Info.plist */,
+				FA1EA87B22932D5A0017B8D8 /* Empleados.swift */,
 			);
 			path = VPMA_ActividadUno;
 			sourceTree = "<group>";
@@ -256,8 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1EA876229303230017B8D8 /* ForgotPasswordViewController.swift in Sources */,
+				FA1EA87A22930D8D0017B8D8 /* MoneyCollectionViewController.swift in Sources */,
+				FA1EA874229303170017B8D8 /* RegisterViewController.swift in Sources */,
+				FA1EA87822930D680017B8D8 /* EmployeViewController.swift in Sources */,
 				FA1EA8482292FEA90017B8D8 /* ViewController.swift in Sources */,
 				FA1EA8462292FEA90017B8D8 /* AppDelegate.swift in Sources */,
+				FA1EA87C22932D5A0017B8D8 /* Empleados.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2SGY3LL4V;
 				INFOPLIST_FILE = VPMA_ActividadUno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T2SGY3LL4V;
 				INFOPLIST_FILE = VPMA_ActividadUno/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
