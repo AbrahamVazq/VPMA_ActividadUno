@@ -10,15 +10,8 @@ import UIKit
 
 class EmployeTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    //MARK: - O U T L E T S
+    @IBOutlet weak var lblNombre: UILabel!
+    @IBOutlet weak var imgImageCumpleaños: UIImageView!
     
 }

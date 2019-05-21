@@ -18,27 +18,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdz-Oa-rgk">
-                        <rect key="frame" x="16" y="12" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre completo chi cheñol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdz-Oa-rgk">
+                        <rect key="frame" x="16" y="12" width="209" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="dtB-K4-wds"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lt-N6-sMY">
-                        <rect key="frame" x="16" y="55" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCJ-UI-hTf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TCJ-UI-hTf">
                         <rect key="frame" x="229" y="14" width="75" height="70"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="RXE-F4-U6a"/>
+                            <constraint firstAttribute="width" constant="75" id="hJp-gn-Ux3"/>
+                        </constraints>
                     </imageView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="Cdz-Oa-rgk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="3N6-UK-dzW"/>
+                    <constraint firstAttribute="trailing" secondItem="TCJ-UI-hTf" secondAttribute="trailing" constant="16" id="ZFp-6U-efc"/>
+                    <constraint firstItem="Cdz-Oa-rgk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="nxO-Kd-M0f"/>
+                    <constraint firstItem="TCJ-UI-hTf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="wiN-AJ-x71"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgImageCumpleaños" destination="TCJ-UI-hTf" id="CXw-dD-dbg"/>
+                <outlet property="lblNombre" destination="Cdz-Oa-rgk" id="WnD-si-NaB"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="171.42857142857142"/>
         </tableViewCell>
     </objects>

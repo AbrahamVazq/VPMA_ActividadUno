@@ -398,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="908" y="59"/>
         </scene>
-        <!--View Controller-->
+        <!--Employe View Controller-->
         <scene sceneID="rlN-3c-kW0">
             <objects>
-                <viewController id="xAO-xp-g4t" sceneMemberID="viewController">
+                <viewController id="xAO-xp-g4t" customClass="EmployeViewController" customModule="VPMA_ActividadUno" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="80a-DC-APg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -415,19 +415,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cCO-XM-cth">
+                                <rect key="frame" x="0.0" y="73" width="320" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="employeCell" id="Cva-LV-xxf">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cva-LV-xxf" id="Qdh-qm-dgu">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xAO-xp-g4t" id="yME-qw-0uY"/>
+                                    <outlet property="delegate" destination="xAO-xp-g4t" id="CfP-yM-ACo"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="cCO-XM-cth" firstAttribute="top" secondItem="8xb-4j-AWh" secondAttribute="bottom" constant="8" id="4hW-FJ-T6E"/>
+                            <constraint firstItem="cCO-XM-cth" firstAttribute="leading" secondItem="oHj-DI-2LH" secondAttribute="leading" id="APh-3U-ufS"/>
+                            <constraint firstItem="oHj-DI-2LH" firstAttribute="bottom" secondItem="cCO-XM-cth" secondAttribute="bottom" id="FfA-G4-tnx"/>
                             <constraint firstItem="8xb-4j-AWh" firstAttribute="top" secondItem="oHj-DI-2LH" secondAttribute="top" constant="20" id="O5y-f7-d8R"/>
+                            <constraint firstItem="oHj-DI-2LH" firstAttribute="trailing" secondItem="cCO-XM-cth" secondAttribute="trailing" id="Rag-Ld-Bst"/>
                             <constraint firstItem="8xb-4j-AWh" firstAttribute="leading" secondItem="oHj-DI-2LH" secondAttribute="leading" constant="16" id="kBj-NY-Vqp"/>
                             <constraint firstItem="oHj-DI-2LH" firstAttribute="trailing" secondItem="8xb-4j-AWh" secondAttribute="trailing" constant="16" id="rGu-Ab-ZVG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oHj-DI-2LH"/>
                     </view>
+                    <connections>
+                        <outlet property="tblEmployeTableView" destination="cCO-XM-cth" id="RD1-HL-ieM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GsY-Cw-nr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="-381"/>
+            <point key="canvasLocation" x="1725" y="-381.33802816901408"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NZr-vX-SJ8">
