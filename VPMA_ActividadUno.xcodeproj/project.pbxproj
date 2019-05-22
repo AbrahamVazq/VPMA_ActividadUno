@@ -10,6 +10,7 @@
 		A410C44E22933B5F002AE563 /* EmployeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410C44C22933B5F002AE563 /* EmployeTableViewCell.swift */; };
 		A410C44F22933B5F002AE563 /* EmployeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A410C44D22933B5F002AE563 /* EmployeTableViewCell.xib */; };
 		A410C49522948D3D002AE563 /* EmployeeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A410C49422948D3D002AE563 /* EmployeeStruct.swift */; };
+		A48CF070229582050058BFB2 /* WSStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CF06F229582050058BFB2 /* WSStruct.swift */; };
 		FA1EA8462292FEA90017B8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA8452292FEA90017B8D8 /* AppDelegate.swift */; };
 		FA1EA8482292FEA90017B8D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA8472292FEA90017B8D8 /* ViewController.swift */; };
 		FA1EA84B2292FEA90017B8D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1EA8492292FEA90017B8D8 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		A410C44C22933B5F002AE563 /* EmployeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeTableViewCell.swift; sourceTree = "<group>"; };
 		A410C44D22933B5F002AE563 /* EmployeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeTableViewCell.xib; sourceTree = "<group>"; };
 		A410C49422948D3D002AE563 /* EmployeeStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeStruct.swift; sourceTree = "<group>"; };
+		A48CF06F229582050058BFB2 /* WSStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSStruct.swift; sourceTree = "<group>"; };
 		FA1EA8422292FEA90017B8D8 /* VPMA_ActividadUno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPMA_ActividadUno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1EA8452292FEA90017B8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1EA8472292FEA90017B8D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				A410C44B22933B43002AE563 /* Cell */,
 				FA1EA8452292FEA90017B8D8 /* AppDelegate.swift */,
+				A48CF06F229582050058BFB2 /* WSStruct.swift */,
 				A410C49422948D3D002AE563 /* EmployeeStruct.swift */,
 				FA1EA8472292FEA90017B8D8 /* ViewController.swift */,
 				FA1EA873229303170017B8D8 /* RegisterViewController.swift */,
@@ -291,6 +294,7 @@
 			files = (
 				FA1EA876229303230017B8D8 /* ForgotPasswordViewController.swift in Sources */,
 				FA1EA87A22930D8D0017B8D8 /* MoneyCollectionViewController.swift in Sources */,
+				A48CF070229582050058BFB2 /* WSStruct.swift in Sources */,
 				FA1EA874229303170017B8D8 /* RegisterViewController.swift in Sources */,
 				A410C44E22933B5F002AE563 /* EmployeTableViewCell.swift in Sources */,
 				FA1EA87822930D680017B8D8 /* EmployeViewController.swift in Sources */,

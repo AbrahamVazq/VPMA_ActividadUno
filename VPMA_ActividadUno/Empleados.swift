@@ -10,14 +10,14 @@ import Foundation
 
 public class Empleados
 {
-    public var nombre: String = ""
-    public var email:  String = ""
-    public var telefono: Int = 0
-    public var fechaNac: String = ""
-    public var drowssap: String = ""
+    public var telefono:   Int = 0
+    public var nombre:     String = ""
+    public var email:      String = ""
+    public var fechaNac:   String = ""
+    public var drowssap:   String = ""
     public var reDrowssap: String = ""
     
-    public var Empleados: [Empleados] = []
+    public var Empleados: [Empleados]? = []
     
     init(nombre: String, email: String, telefono: Int, fechaNac: String, drowssap: String, reDrowssap: String) {
         self.nombre     = nombre
