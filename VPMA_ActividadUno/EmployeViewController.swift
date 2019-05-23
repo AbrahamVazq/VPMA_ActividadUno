@@ -16,6 +16,7 @@ class EmployeViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK: - V A R I A B L E S
     var wsstruct: WSStruct?
     var numberEmployes: Int = 0
+    var objEmploye = EmployeeStruct()
     
     //MARK: - L I F E C Y C L E
     override func viewDidLoad() {
@@ -54,7 +55,39 @@ class EmployeViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 100.0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier:"tblEmployeToEmployeEditData", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "tblEmployeToEmployeEditData"
+        {
+            if let indexPath = self.tblEmployeTableView.indexPathForSelectedRow {
+                print(indexPath)
+                
+                let vcObj = segue.destination as! EditDataEmployesViewController
+                vcObj.iNoEmploye           = (wsstruct?.data![indexPath.row].idEmployee)!
+                vcObj.strFullName          = (wsstruct?.data![indexPath.row].fullName)!
+                vcObj.streMail             = (wsstruct?.data![indexPath.row].email)!
+                vcObj.strPhoto             = (wsstruct?.data![indexPath.row].photo)!
+                vcObj.strAddress           = (wsstruct?.data![indexPath.row].address)!
+                vcObj.strCompany           = (wsstruct?.data![indexPath.row].company)!
+                vcObj.strArea              = (wsstruct?.data![indexPath.row].area)!
+                vcObj.strSeniority         = (wsstruct?.data![indexPath.row].seniority)!
+                vcObj.strDateInPayRoll     = (wsstruct?.data![indexPath.row].dateInPayRoll ?? "")!
+                vcObj.strBirthday          = (wsstruct?.data![indexPath.row].birthday ?? "")!
+                vcObj.strAge               = (wsstruct?.data![indexPath.row].age ?? "")!
+                vcObj.strMaritalStatus     = (wsstruct?.data![indexPath.row].maritalStatus ?? "")!
+                vcObj.strRole              = (wsstruct?.data![indexPath.row].role ?? "")!
+                vcObj.strProductsPurchased = (wsstruct?.data![indexPath.row].productsPurchased ?? "")!
+            }
+        }
+    }
+    
+    
     // V A L I D A T I O N S
+    
     
     
     
@@ -77,11 +110,10 @@ class EmployeViewController: UIViewController, UITableViewDelegate, UITableViewD
                         
                         self.numberEmployes = (self.wsstruct?.data?.count)! as Int
                         
-                        let primerReg = self.wsstruct?.data?[((self.wsstruct?.data!.count)!) - 1]
-                        
-                        print(primerReg!.fullName as Any)
-                        print(primerReg!.address as Any)
-                        
+//                        let primerReg = self.wsstruct?.data?[((self.wsstruct?.data!.count)!) - 1]
+//                        print(primerReg!.fullName as Any)
+//                        print(primerReg!.address as Any)
+//                        print(primerReg!.birthday as Any)
                         DispatchQueue.main.async(execute: {
                             self.tblEmployeTableView.reloadData()
                         })
