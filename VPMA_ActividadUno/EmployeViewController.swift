@@ -126,6 +126,11 @@ class EmployeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         task.resume()
     }
+    
+    @IBAction func btnBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
     /*
     // MARK: - Navigation
