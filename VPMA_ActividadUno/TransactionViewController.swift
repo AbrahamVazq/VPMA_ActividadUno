@@ -16,6 +16,7 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
     var wsstruct: WSStruct?
     var numberEmployes: Int = 0
     var objEmploye = EmployeeStruct()
+    var cell: EmployeTableViewCell = EmployeTableViewCell()
 
     //MARK: - L I F E C Y C L E
     override func viewDidLoad() {
@@ -26,27 +27,48 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
         self.showInfo()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        cell.tag = 0
+    }
+    
     //MARK: - T A B L E · V I E W ··· D E L E G A T E S
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if wsstruct != nil
-        {
+        if wsstruct != nil{
             return (self.wsstruct?.data!.count)!
         }
-        
         return 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "employeCell", for: indexPath) as! EmployeTableViewCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "employeCell", for: indexPath) as! EmployeTableViewCell
+        let id = wsstruct?.data![indexPath.row].idEmployee
         
         cell.lblNombre.text = wsstruct?.data![indexPath.row].fullName
-//        cell.imgImageCumpleaños.image = #imageLiteral(resourceName: "cake")
+        
+        if (id! % 3 == 0){
+            cell.backgroundColor? = UIColor.green
+        }
+        
+        if (id! % 5 == 0) {
+            cell.lblSeeRute.isHidden = false
+            cell.tag = id!
+      
+        }else {
+            cell.lblSeeRute.isHidden = true
+        }
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier:"TransactionVCToMapTransactionVC", sender: self)
+        
+        if (cell.tag != 0) {
+            performSegue(withIdentifier:"TransactionVCToMapTransactionVC", sender: self)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 100.0
     }
     
     // F U N C T I O N S
@@ -83,7 +105,6 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
         }
         task.resume()
     }
-    
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -92,32 +113,14 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
         {
             if let indexPath = self.tblTransaction.indexPathForSelectedRow {
                 print(indexPath)
-                
-                let vcObj = segue.destination as! MapTransactionsViewController
-                //                vcObj.iNoEmploye           = (wsstruct?.data![indexPath.row].idEmployee)!
-                //                vcObj.strFullName          = (wsstruct?.data![indexPath.row].fullName)!
-                //                vcObj.streMail             = (wsstruct?.data![indexPath.row].email)!
-                //                vcObj.strPhoto             = (wsstruct?.data![indexPath.row].photo)!
-                //                vcObj.strAddress           = (wsstruct?.data![indexPath.row].address)!
-                //                vcObj.strCompany           = (wsstruct?.data![indexPath.row].company)!
-                //                vcObj.strArea              = (wsstruct?.data![indexPath.row].area)!
-                //                vcObj.strSeniority         = (wsstruct?.data![indexPath.row].seniority)!
-                //                vcObj.strDateInPayRoll     = (wsstruct?.data![indexPath.row].dateInPayRoll ?? "")!
-                //                vcObj.strBirthday          = (wsstruct?.data![indexPath.row].birthday ?? "")!
-                //                vcObj.strAge               = (wsstruct?.data![indexPath.row].age ?? "")!
-                //                vcObj.strMaritalStatus     = (wsstruct?.data![indexPath.row].maritalStatus ?? "")!
-                //                vcObj.strRole              = (wsstruct?.data![indexPath.row].role ?? "")!
-                //                vcObj.strProductsPurchased = (wsstruct?.data![indexPath.row].productsPurchased ?? "")!
+               
             }
         }
     }
 
-
     //MARK: - A C T I O N S
-    
     @IBAction func btnBack(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
     
 }

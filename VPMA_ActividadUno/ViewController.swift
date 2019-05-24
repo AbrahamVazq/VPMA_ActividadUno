@@ -26,6 +26,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tapGestureRecognizer)
         // Do any additional setup after loading the view, typically from a nib.
+        
+        lblUserOrEmail.text = "usuarioTest"
+        lblDrowssap.text = "12345"
     }
     
     //MARK: - A C T I O N

@@ -14,6 +14,8 @@
 		A48CF0982295D7460058BFB2 /* EditDataEmployesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CF0972295D7460058BFB2 /* EditDataEmployesViewController.swift */; };
 		A4C7FE392297212600C65987 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7FE382297212600C65987 /* TransactionViewController.swift */; };
 		A4C7FE3B2297213700C65987 /* MapTransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7FE3A2297213700C65987 /* MapTransactionsViewController.swift */; };
+		A4C7FE3E2298520D00C65987 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C7FE3D2298520D00C65987 /* CoreData.framework */; };
+		A4C7FE41229858E000C65987 /* ModelEmployes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4C7FE3F229858E000C65987 /* ModelEmployes.xcdatamodeld */; };
 		FA1EA8462292FEA90017B8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA8452292FEA90017B8D8 /* AppDelegate.swift */; };
 		FA1EA8482292FEA90017B8D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1EA8472292FEA90017B8D8 /* ViewController.swift */; };
 		FA1EA84B2292FEA90017B8D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA1EA8492292FEA90017B8D8 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		A48CF0972295D7460058BFB2 /* EditDataEmployesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataEmployesViewController.swift; sourceTree = "<group>"; };
 		A4C7FE382297212600C65987 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		A4C7FE3A2297213700C65987 /* MapTransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTransactionsViewController.swift; sourceTree = "<group>"; };
+		A4C7FE3D2298520D00C65987 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A4C7FE40229858E000C65987 /* ModelEmployes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ModelEmployes.xcdatamodel; sourceTree = "<group>"; };
 		FA1EA8422292FEA90017B8D8 /* VPMA_ActividadUno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPMA_ActividadUno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1EA8452292FEA90017B8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA1EA8472292FEA90017B8D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C7FE3E2298520D00C65987 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A4C7FE3C2298520D00C65987 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4C7FE3D2298520D00C65987 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA1EA8392292FEA90017B8D8 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +127,7 @@
 				FA1EA8592292FEA90017B8D8 /* VPMA_ActividadUnoTests */,
 				FA1EA8642292FEA90017B8D8 /* VPMA_ActividadUnoUITests */,
 				FA1EA8432292FEA90017B8D8 /* Products */,
+				A4C7FE3C2298520D00C65987 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +158,7 @@
 				A4C7FE3A2297213700C65987 /* MapTransactionsViewController.swift */,
 				FA1EA8492292FEA90017B8D8 /* Main.storyboard */,
 				FA1EA84C2292FEA90017B8D8 /* Assets.xcassets */,
+				A4C7FE3F229858E000C65987 /* ModelEmployes.xcdatamodeld */,
 				FA1EA84E2292FEA90017B8D8 /* LaunchScreen.storyboard */,
 				FA1EA8512292FEA90017B8D8 /* Info.plist */,
 				FA1EA87B22932D5A0017B8D8 /* Empleados.swift */,
@@ -302,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C7FE3B2297213700C65987 /* MapTransactionsViewController.swift in Sources */,
+				A4C7FE41229858E000C65987 /* ModelEmployes.xcdatamodeld in Sources */,
 				FA1EA876229303230017B8D8 /* ForgotPasswordViewController.swift in Sources */,
 				FA1EA87A22930D8D0017B8D8 /* MoneyCollectionViewController.swift in Sources */,
 				A48CF070229582050058BFB2 /* WSStruct.swift in Sources */,
@@ -638,6 +654,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A4C7FE3F229858E000C65987 /* ModelEmployes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A4C7FE40229858E000C65987 /* ModelEmployes.xcdatamodel */,
+			);
+			currentVersion = A4C7FE40229858E000C65987 /* ModelEmployes.xcdatamodel */;
+			path = ModelEmployes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA1EA83A2292FEA90017B8D8 /* Project object */;
 }

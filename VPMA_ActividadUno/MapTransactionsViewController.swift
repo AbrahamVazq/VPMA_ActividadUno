@@ -121,7 +121,7 @@ extension MapTransactionsViewController: MKMapViewDelegate{
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         
         let renderer = MKPolylineRenderer(overlay: overlay)
-        renderer.strokeColor = UIColor.orange
+        renderer.strokeColor = UIColor.red
         renderer.lineDashPattern = [2,4];
         renderer.lineWidth = 4.0
         renderer.alpha = 1
