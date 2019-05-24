@@ -11,7 +11,8 @@ import UIKit
 class EmployeTableViewCell: UITableViewCell {
 
     //MARK: - O U T L E T S
-    @IBOutlet weak var lblNombre: UILabel!
+    @IBOutlet weak var lblNombre:          UILabel!
     @IBOutlet weak var imgImageCumpleaños: UIImageView!
+    @IBOutlet weak var lblSeeRute:         UILabel!
     
 }
