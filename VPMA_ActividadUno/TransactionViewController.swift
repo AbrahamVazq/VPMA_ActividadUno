@@ -38,22 +38,37 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
         }
         return 0
     }
-
+    func harcode(){
+        
+        for item :EmployeeStruct in  wsstruct!.data! {
+            var id = item.idEmployee
+            
+            if (id! % 5 == 0) {
+                
+                item.role = "gerente"
+                
+            }else {
+                item.role = "obrero"
+                
+            }
+            
+        }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell(withIdentifier: "employeCell", for: indexPath) as! EmployeTableViewCell
         let id = wsstruct?.data![indexPath.row].idEmployee
         
         cell.lblNombre.text = wsstruct?.data![indexPath.row].fullName
         
-        if (id! % 3 == 0){
-            cell.backgroundColor? = UIColor.green
-        }
+     var employe =  wsstruct?.data?[indexPath.row]
         
-        if (id! % 5 == 0) {
+        if (employe?.role != "gerente") {
+          
             cell.lblSeeRute.isHidden = false
-            cell.tag = id!
+          
       
         }else {
+             cell.backgroundColor? = UIColor.green
             cell.lblSeeRute.isHidden = true
         }
         return cell
@@ -61,10 +76,12 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if (cell.tag != 0) {
-            performSegue(withIdentifier:"TransactionVCToMapTransactionVC", sender: self)
+        var employe =  wsstruct?.data?[indexPath.row]
+        if employe?.role != "gerente"{
+             performSegue(withIdentifier:"TransactionVCToMapTransactionVC", sender: self)
+            
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -86,7 +103,7 @@ class TransactionViewController: UIViewController, UITableViewDelegate, UITableV
                         self.wsstruct = try JSONDecoder().decode(WSStruct.self, from: resp)
                         print(self.wsstruct?.data?.count as Any)
                         print(self.wsstruct?.status as Any)
-                        
+                        self.harcode()
                         self.numberEmployes = (self.wsstruct?.data?.count)! as Int
                         
                         //                        let primerReg = self.wsstruct?.data?[((self.wsstruct?.data!.count)!) - 1]
