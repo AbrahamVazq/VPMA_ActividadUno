@@ -8,7 +8,7 @@
 
 import Foundation
 
-class EmployeeStruct: Decodable {
+class EmployeeStruct:Decodable {
     
     var idEmployee:         Int?
     var fullName:           String?
